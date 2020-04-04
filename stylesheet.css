@@ -1,9 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
+
 * {
-	margin: 0;
-	font-family: 'Ubuntu';
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu";
+  font-weight: 400;
 }
 
 body {
-	background-color: #282a36;
-	color: #f8f8f2;
+  color: #f8f8f2;
+  background-color: #282a36;
+}
+
+a.github-button {
+  background-color: #282a36;
+  color: #f8f8f2;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+a.github-button:hover {
+  background-color: #252732;
+  transition: all 0.2s ease-in;
+  color: #8be9fd;
+}
+
+.light-title {
+  text-align: center;
+  font-size: 22pt;
+  color: #e5e5e5;
+}
+
+.dark-title {
+  text-align: center;
+  font-size: 22pt;
+  color: #bd93f9;
+}
+
+h4 {
+  color: #b3b4b6;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+header {
+  background-color: #282a36;
+  display: flex;
+  justify-content: space-between;
+  height: 43px;
+  align-items: center;
+  padding: 5px 20px;
+  font-size: 14pt;
+  filter: drop-shadow(0 1px 2px black);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+header > div a {
+  color: #f8f8f2;
+  font-weight: bold;
+  font-size: 15pt;
+  text-decoration: none;
+}
+
+header > div a:hover {
+  color: #ff5555;
+  transition: all 0.4s ease-out;
+}
+
+nav ul {
+  padding-right: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+nav li a {
+  color: #f8f8f2;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  color: #bd93f9;
+  text-decoration: underline;
+  transition: all 0.2s ease-in;
+}
+
+nav li a:active {
+  color: #6272a4;
+  text-decoration: underline;
+  transition: none;
+}
+.dark-sect {
+  background-color: #282a36;
+  padding: 40px;
+  min-height: 300px;
+}
+
+.light-sect {
+  background-color: #383a59;
+  padding: 40px;
+  min-height: 300px;
+}
+
+header + .light-sect {
+  text-align: center;
+  background-image: url("img/sect-background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat-x;
+  background-blend-mode: darken;
+}
+
+header + .light-sect img {
+  height: auto;
+  max-height: 200px;
+  min-height: 100px;
+  border-radius: 5%;
+}
+
+footer {
+  font-family: "Ubuntu Condensed";
+  font-style: normal;
+  text-align: center;
+  margin-top: 10px;
 }
