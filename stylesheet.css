@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap");
 
 * {
   margin: 0;
@@ -10,6 +11,11 @@
 body {
   color: #f8f8f2;
   background-color: #282a36;
+}
+
+::selection {
+  color: #252732;
+  background-color: #bd93f9;
 }
 
 a.github-button {
@@ -83,12 +89,13 @@ nav li {
 nav li a {
   color: #f8f8f2;
   text-decoration: none;
+  border-bottom: 2px solid transparent;
 }
 
 nav li a:hover {
   color: #bd93f9;
-  text-decoration: underline;
   transition: all 0.2s ease-in;
+  border-color: inherit;
 }
 
 nav li a:active {
@@ -124,9 +131,47 @@ header + .light-sect img {
   border-radius: 5%;
 }
 
+h3.light-title + div {
+  display: flex;
+  align-content: space-around;
+}
+
+.rect {
+  background-color: #282a36;
+  min-height: 140px;
+  min-width: 250px;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 60px;
+  border-radius: 5%;
+}
+
+.rect h4 {
+  color: #bd93f9;
+}
+
+.rect li {
+  font-size: 18pt;
+  text-align: justify;
+  list-style: disc;
+}
+
+.rect li:hover {
+  list-style: circle;
+  transition: list-style 0.5 ease-out;
+}
+
+.credits {
+  font-weight: 300;
+}
+
 footer {
   font-family: "Ubuntu Condensed";
   font-style: normal;
   text-align: center;
   margin-top: 10px;
+  background-color: #171820;
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
