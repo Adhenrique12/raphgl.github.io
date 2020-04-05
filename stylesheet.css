@@ -13,12 +13,27 @@ body {
   background-color: #282a36;
 }
 
+a {
+  color: #f8f8f2;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #8be9fd;
+  transition: all 0.2s ease-in;
+}
+
+a:active {
+  color: #6cc1d3;
+  transition: none;
+}
+
 ::selection {
   color: #252732;
   background-color: #bd93f9;
 }
 
-a.github-button {
+.github-button {
   background-color: #282a36;
   color: #f8f8f2;
   padding: 12px 15px;
@@ -27,10 +42,10 @@ a.github-button {
   text-decoration: none;
 }
 
-a.github-button:hover {
+.github-button:hover {
   background-color: #252732;
+  color: #ff79c6;
   transition: all 0.2s ease-in;
-  color: #8be9fd;
 }
 
 .light-title {
@@ -47,7 +62,7 @@ a.github-button:hover {
 
 h4 {
   color: #b3b4b6;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   text-align: center;
 }
 
@@ -87,22 +102,19 @@ nav li {
 }
 
 nav li a {
-  color: #f8f8f2;
-  text-decoration: none;
   border-bottom: 2px solid transparent;
 }
 
 nav li a:hover {
   color: #bd93f9;
-  transition: all 0.2s ease-in;
   border-color: inherit;
 }
 
 nav li a:active {
-  color: #6272a4;
-  text-decoration: underline;
+  color: #a079d8;
   transition: none;
 }
+
 .dark-sect {
   background-color: #282a36;
   padding: 40px;
@@ -112,7 +124,7 @@ nav li a:active {
 .light-sect {
   background-color: #383a59;
   padding: 40px;
-  min-height: 300px;
+  min-height: 200px;
 }
 
 header + .light-sect {
@@ -128,7 +140,7 @@ header + .light-sect img {
   height: auto;
   max-height: 200px;
   min-height: 100px;
-  border-radius: 5%;
+  border-radius: 5px;
 }
 
 h3.light-title + div {
@@ -136,15 +148,48 @@ h3.light-title + div {
   align-content: space-around;
 }
 
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  justify-items: center;
+}
+
+.project-rect {
+  display: block;
+}
+
+.project-rect img {
+  display: inline-block;
+  background-color: #c4c4c4;
+  height: 150px;
+  width: 275px;
+  color: #282a36;
+  font-size: 16pt;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.project-rect img:hover {
+  filter: brightness(1.2);
+  transition: all 0.4s ease-in;
+}
+
+.project-rect h4 {
+  font-size: 14pt;
+  color: #f8f8f8;
+}
+
 .rect {
   background-color: #282a36;
   min-height: 140px;
   min-width: 250px;
-  margin-top: 15px;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   padding: 20px 60px;
-  border-radius: 5%;
+  border-radius: 10px;
 }
 
 .rect h4 {
@@ -155,15 +200,30 @@ h3.light-title + div {
   font-size: 18pt;
   text-align: justify;
   list-style: disc;
+  margin-left: 15px;
 }
 
 .rect li:hover {
   list-style: circle;
-  transition: list-style 0.5 ease-out;
+  cursor: default;
+  transition: list-style 0.8 ease-in-out;
+}
+
+.footer-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.contact {
+  display: block;
+  text-align: center;
 }
 
 .credits {
   font-weight: 300;
+  width: 40%;
 }
 
 footer {
