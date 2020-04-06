@@ -77,7 +77,7 @@ header {
   filter: drop-shadow(0 1px 2px black);
   position: sticky;
   top: 0;
-  z-index: 99;
+  z-index: 2;
 }
 
 header > div a {
@@ -130,7 +130,8 @@ nav li a:active {
 header + .light-sect {
   text-align: center;
   background-image: url("img/sect-background.jpg");
-  background-position: center;
+  background-attachment: fixed;
+  background-position-y: bottom 20%;
   background-size: cover;
   background-repeat: repeat-x;
   background-blend-mode: darken;
@@ -212,8 +213,12 @@ h3.light-title + div {
 .footer-flex {
   display: flex;
   align-items: center;
-  justify-content: center;
   justify-content: space-evenly;
+}
+
+.footer-flex img {
+  height: 165px;
+  width: auto;
 }
 
 .contact {
@@ -223,7 +228,15 @@ h3.light-title + div {
 
 .credits {
   font-weight: 300;
-  width: 40%;
+  flex-basis: 40%;
+}
+
+.credits a {
+  color: #6272a4;
+}
+
+.credits a:hover {
+  color: #8be9fd;
 }
 
 footer {
