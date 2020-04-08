@@ -131,7 +131,7 @@ header + .light-sect {
   text-align: center;
   background-image: url("img/sect-background.jpg");
   background-attachment: fixed;
-  background-position-y: bottom 20%;
+  background-position-y: bottom 24%;
   background-size: cover;
   background-repeat: repeat-x;
   background-blend-mode: darken;
@@ -163,12 +163,12 @@ h3.light-title + div {
 .project-rect img {
   display: inline-block;
   background-color: #c4c4c4;
-  height: 150px;
-  width: 275px;
+  height: 175px;
+  width: auto;
   color: #282a36;
   font-size: 16pt;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 3px;
   margin-bottom: 5px;
 }
 
@@ -190,7 +190,7 @@ h3.light-title + div {
   margin-left: auto;
   margin-right: auto;
   padding: 20px 60px;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .rect h4 {
@@ -201,7 +201,8 @@ h3.light-title + div {
   font-size: 18pt;
   text-align: justify;
   list-style: disc;
-  margin-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .rect li:hover {
@@ -227,10 +228,13 @@ h3.light-title + div {
 }
 
 .credits {
-  font-weight: 300;
-  flex-basis: 40%;
+  display: flex;
+  justify-content: center;
 }
 
+.credits div {
+  margin-left: 20px;
+}
 .credits a {
   color: #6272a4;
 }
@@ -243,8 +247,12 @@ footer {
   font-family: "Ubuntu Condensed";
   font-style: normal;
   text-align: center;
-  margin-top: 10px;
+  padding-top: 10px;
   background-color: #171820;
   padding-top: 10px;
   padding-bottom: 5px;
+}
+
+footer * {
+  font-family: "Ubuntu Condensed";
 }
