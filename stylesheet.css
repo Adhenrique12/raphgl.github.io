@@ -1,6 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap");
 
+/*global variables*/
+:root {
+  --white: #f8f8f2;
+  --grey: #b3b4b6;
+  --purple: #bd93f9;
+  --pink: #ff79c6;
+  --light-bg: #383a59;
+  --dark-bg: #282a36;
+  --darker-bg: #171820;
+  --blue: #8be9fd;
+  --blue-accent: #6272a4;
+  --red: #ff5555;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,33 +23,33 @@
 }
 
 body {
-  color: #f8f8f2;
-  background-color: #282a36;
+  color: var(--white);
+  background-color: var(--dark-bg);
 }
 
 a {
-  color: #f8f8f2;
+  color: var(--white);
   text-decoration: none;
 }
 
 a:hover {
-  color: #8be9fd;
+  color: var(--blue);
   transition: all 0.2s ease-in;
 }
 
 a:active {
-  color: #6cc1d3;
+  color: var(--blue);
   transition: none;
 }
 
 ::selection {
-  color: #252732;
-  background-color: #bd93f9;
+  color: var(--darker-bg);
+  background-color: var(--purple);
 }
 
 .github-button {
-  background-color: #282a36;
-  color: #f8f8f2;
+  background-color: var(--dark-bg);
+  color: var(--white);
   padding: 12px 15px;
   border: none;
   border-radius: 5px;
@@ -43,31 +57,30 @@ a:active {
 }
 
 .github-button:hover {
-  background-color: #252732;
-  color: #ff79c6;
+  color: var(--pink);
   transition: all 0.2s ease-in;
 }
 
 .light-title {
   text-align: center;
   font-size: 22pt;
-  color: #e5e5e5;
+  color: var(--white);
 }
 
 .dark-title {
   text-align: center;
   font-size: 22pt;
-  color: #bd93f9;
+  color: var(--purple);
 }
 
 h4 {
-  color: #b3b4b6;
+  color: var(--grey);
   margin-bottom: 25px;
   text-align: center;
 }
 
 header {
-  background-color: #282a36;
+  background-color: var(--dark-bg);
   display: flex;
   justify-content: space-between;
   height: 43px;
@@ -81,14 +94,14 @@ header {
 }
 
 header > div a {
-  color: #f8f8f2;
+  color: var(--white);
   font-weight: bold;
   font-size: 15pt;
   text-decoration: none;
 }
 
 header > div a:hover {
-  color: #ff5555;
+  color: var(--blue-accent);
   transition: all 0.4s ease-out;
 }
 
@@ -106,23 +119,23 @@ nav li a {
 }
 
 nav li a:hover {
-  color: #bd93f9;
+  color: var(--purple);
   border-color: inherit;
 }
 
 nav li a:active {
-  color: #a079d8;
+  color: var(--purple);
   transition: none;
 }
 
 .dark-sect {
-  background-color: #282a36;
+  background-color: var(--dark-bg);
   padding: 40px;
   min-height: 300px;
 }
 
 .light-sect {
-  background-color: #383a59;
+  background-color: var(--light-bg);
   padding: 40px;
   min-height: 200px;
 }
@@ -144,9 +157,28 @@ header + .light-sect img {
   border-radius: 5px;
 }
 
-h3.light-title + div {
-  display: flex;
-  align-content: space-around;
+@media (min-width: 1250px) {
+  .rect-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1249px) {
+  .rect-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .rect-grid {
+    display: grid;
+    grid-template-columns: 1frr;
+    column-gap: 15px;
+  }
 }
 
 @media (min-width: 1386px) {
@@ -154,7 +186,6 @@ h3.light-title + div {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 8px;
-    justify-items: center;
   }
 }
 
@@ -163,14 +194,21 @@ h3.light-title + div {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 5px;
-    justify-items: center;
   }
 }
 
-@media (max-width: 1054px) {
+@media (min-width: 768px) and (max-width: 1054px) {
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 5px;
+  }
+}
+
+@media (max-width: 767px) {
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     column-gap: 5px;
     justify-items: center;
   }
@@ -182,10 +220,10 @@ h3.light-title + div {
 
 .project-rect img {
   display: inline-block;
-  background-color: #c4c4c4;
+  background-color: var(--grey);
   height: 175px;
   width: auto;
-  color: #282a36;
+  color: var(--dark-bg);
   font-size: 16pt;
   text-align: center;
   border-radius: 3px;
@@ -199,17 +237,15 @@ h3.light-title + div {
 
 .project-rect h4 {
   font-size: 14pt;
-  color: #f8f8f8;
+  color: var(--white);
 }
 
 @media (min-width: 1580px) {
   .rect {
-    background-color: #282a36;
+    background-color: var(--dark-bg);
     min-height: 140px;
     min-width: 250px;
     margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
     padding: 20px 60px;
     border-radius: 8px;
   }
@@ -217,19 +253,17 @@ h3.light-title + div {
 
 @media (max-width: 1579px) {
   .rect {
-    background-color: #282a36;
+    background-color: var(--dark-bg);
     min-height: 140px;
     min-width: 160px;
     margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
     padding: 20px 60px;
     border-radius: 8px;
   }
 }
 
 .rect h4 {
-  color: #bd93f9;
+  color: var(--purple);
 }
 
 .rect li {
@@ -271,11 +305,11 @@ h3.light-title + div {
   margin-left: 20px;
 }
 .credits a {
-  color: #6272a4;
+  color: var(--blue-accent);
 }
 
 .credits a:hover {
-  color: #8be9fd;
+  color: var(--blue);
 }
 
 footer {
@@ -283,7 +317,7 @@ footer {
   font-style: normal;
   text-align: center;
   padding-top: 10px;
-  background-color: #171820;
+  background-color: var(--darker-bg);
   padding-top: 10px;
   padding-bottom: 5px;
 }

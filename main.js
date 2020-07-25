@@ -7,7 +7,7 @@ const aboutPage = document.querySelector('#about_section')
 
 projectsLink.addEventListener('click', ()=>{
         event.preventDefault();
-        projectsPage.scrollIntoView({behavior: 'smooth', block: 'center'});
+        projectsPage.scrollIntoView({behavior: 'smooth', block: 'start'});
 })
 
 toolsLink.addEventListener('click', ()=>{
