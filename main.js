@@ -7,15 +7,15 @@ const aboutPage = document.querySelector('#about_section')
 
 projectsLink.addEventListener('click', ()=>{
         event.preventDefault();
-        projectsPage.scrollIntoView({behavior: 'smooth', block: 'start'});
+        projectsPage.scrollIntoView({behavior: 'smooth'});
 })
 
 toolsLink.addEventListener('click', ()=>{
         event.preventDefault();
-        toolsPage.scrollIntoView({behavior: 'smooth', block: 'center'});
+        toolsPage.scrollIntoView({behavior: 'smooth'});
 })
 
 aboutLink.addEventListener('click', ()=>{
         event.preventDefault();
-        aboutPage.scrollIntoView({behavior: 'smooth', block: 'center'});
+        aboutPage.scrollIntoView({behavior: 'smooth'});
 })
