@@ -106,27 +106,94 @@ header > div a:hover {
   transition: all 0.4s ease-out;
 }
 
-nav ul {
-  padding-right: 0;
+@media (max-width: 767px) {
+  nav ul {
+    display: none;
+  }
+
+  .navbar {
+    background-color: var(--darker-bg);
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    left: 0;
+    top: 100%;
+    height: 100px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav li {
+    list-style: none;
+    margin: 3px;
+  }
+
+  nav li a {
+    display: block;
+    width: 100%;
+    height: 1.2em;
+    transition: background-color 1s ease-out;
+  }
+
+  nav li a:hover {
+    color: var(--white);
+    background-color: var(--light-bg);
+  }
+
+  nav li a:active {
+    color: var(--white);
+    background-color: var(--light-bg);
+  }
+
+  .hamburger-menu {
+    display: flex;
+    width: 28px;
+    height: 25px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .line {
+    background-color: var(--grey);
+    border-radius: 5px;
+    width: 95%;
+    height: 3px;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .toggle-hamburger .line-1 {
+    transform: rotateZ(-45deg) translate(-10px);
+  }
+
+  .toggle-hamburger .line-2 {
+    opacity: 0;
+  }
+
+  .toggle-hamburger .line-3 {
+    transform: rotateZ(45deg) translate(-10px);
+  }
 }
 
-nav li {
-  display: inline-block;
-  margin-left: 15px;
-}
+@media (min-width: 768px) {
+  nav li {
+    display: inline-block;
+    margin-left: 15px;
+  }
+  nav li a {
+    border-bottom: 2px solid transparent;
+  }
 
-nav li a {
-  border-bottom: 2px solid transparent;
-}
+  nav li a:hover {
+    color: var(--purple);
+    border-color: inherit;
+  }
 
-nav li a:hover {
-  color: var(--purple);
-  border-color: inherit;
-}
-
-nav li a:active {
-  color: var(--purple);
-  transition: none;
+  nav li a:active {
+    color: var(--purple);
+    transition: none;
+  }
 }
 
 .dark-sect {
@@ -149,6 +216,7 @@ header + .light-sect {
   background-size: cover;
   background-repeat: repeat-x;
   background-blend-mode: darken;
+  min-height: 50px;
 }
 
 header + .light-sect img {
@@ -177,7 +245,7 @@ header + .light-sect img {
 @media (max-width: 767px) {
   .rect-grid {
     display: grid;
-    grid-template-columns: 1frr;
+    grid-template-columns: 1fr;
     column-gap: 15px;
   }
 }
@@ -270,15 +338,10 @@ header + .light-sect img {
 }
 
 .rect li {
-  font-size: 18pt;
-  text-align: justify;
-  list-style: disc;
-}
-
-.rect li:hover {
-  list-style: circle;
-  cursor: default;
-  transition: list-style 0.8 ease-in-out;
+  text-align: center;
+  font-size: 16pt;
+  list-style: none;
+  padding-bottom: 2px;
 }
 
 .footer-flex {
