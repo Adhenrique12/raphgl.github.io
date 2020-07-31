@@ -14,6 +14,17 @@
   --blue-accent: #6272a4;
   --red: #ff5555;
   --border-radius: 8px;
+  --dark-focus: #1e202b;
+  --light-focus: #2d2f4d;
+}
+
+/*State classes*/
+#focus-light {
+  background-color: var(--light-focus);
+}
+
+#focus-dark {
+  background-color: var(--dark-focus);
 }
 
 * {
@@ -200,12 +211,14 @@ header > div a:hover {
   background-color: var(--dark-bg);
   padding: 40px;
   min-height: 300px;
+  transition: background-color 0.2s ease-out;
 }
 
 .light-sect {
   background-color: var(--light-bg);
   padding: 40px;
   min-height: 300px;
+  transition: background-color 0.2s ease-out;
 }
 
 header + .light-sect {
@@ -358,6 +371,12 @@ header + .light-sect img {
 .contact {
   display: block;
   text-align: center;
+}
+
+div.contact {
+        min-width: 5em;
+        max-width: 10em;
+        height: auto;
 }
 
 @media (min-width: 784px) {
