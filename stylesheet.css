@@ -3,6 +3,7 @@
 
 /*global variables*/
 :root {
+  /*colors*/
   --white: #f8f8f2;
   --grey: #b3b4b6;
   --purple: #bd93f9;
@@ -13,12 +14,20 @@
   --blue: #8be9fd;
   --blue-accent: #6272a4;
   --red: #ff5555;
-  --border-radius: 8px;
   --dark-focus: #1e202b;
   --light-focus: #2d2f4d;
+  /*sizes*/
+  --border-radius: 6px;
+  /*breakpoints*/
+  /*
+   * Small: 768px
+   * Widescreen: 1024px
+   * Medium: 1280px
+   * Large: 1440px;
+   */
 }
 
-/*State classes*/
+/*States*/
 #focus-light {
   background-color: var(--light-focus);
 }
@@ -117,27 +126,9 @@ header > div a:hover {
   transition: all 0.4s ease-out;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   nav ul {
     display: none;
-  }
-
-  .navbar {
-    background-color: var(--darker-bg);
-    display: flex;
-    position: fixed;
-    flex-direction: column;
-    left: 0;
-    top: 100%;
-    height: 100px;
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-  }
-
-  nav li {
-    list-style: none;
-    margin: 3px;
   }
 
   nav li a {
@@ -155,6 +146,20 @@ header > div a:hover {
   nav li a:active {
     color: var(--white);
     background-color: var(--light-bg);
+  }
+
+  /*Hamburger Menu classes*/
+  .navbar {
+    background-color: var(--darker-bg);
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    left: 0;
+    top: 100%;
+    height: 100px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
   }
 
   .hamburger-menu {
@@ -192,9 +197,6 @@ header > div a:hover {
     display: inline-block;
     margin-left: 15px;
   }
-  nav li a {
-    border-bottom: 2px solid transparent;
-  }
 
   nav li a:hover {
     color: var(--purple);
@@ -221,6 +223,7 @@ header > div a:hover {
   transition: background-color 0.2s ease-out;
 }
 
+/*Gives the first light section after the navbar a background*/
 header + .light-sect {
   text-align: center;
   background-image: url("img/sect-background.jpg");
@@ -239,59 +242,52 @@ header + .light-sect img {
   border-radius: var(--border-radius);
 }
 
-@media (min-width: 1250px) {
+.rect-grid {
+  display: grid;
+  column-gap: 30px;
+  row-gap: 15px;
+}
+
+@media (min-width: 1441px) {
   .rect-grid {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 15px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1249px) {
+@media (min-width: 768px) and (max-width: 1440px) {
   .rect-grid {
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 15px;
   }
 }
 
 @media (max-width: 767px) {
   .rect-grid {
-    display: grid;
     grid-template-columns: 1fr;
-    column-gap: 15px;
   }
 }
 
-@media (min-width: 1386px) {
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 5px;
+}
+
+@media (min-width: 1024px) {
   .projects-grid {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 8px;
   }
 }
 
-@media (min-width: 1055px) and (max-width: 1385px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 5px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1054px) {
-  .projects-grid {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 5px;
   }
 }
 
 @media (max-width: 767px) {
   .projects-grid {
-    display: grid;
     grid-template-columns: repeat(1, 1fr);
-    column-gap: 5px;
     justify-items: center;
   }
 }
@@ -324,25 +320,23 @@ header + .light-sect img {
   border-bottom-right-radius: var(--border-radius);
 }
 
-@media (min-width: 1580px) {
+.rect {
+  background-color: var(--dark-bg);
+  min-height: 140px;
+  margin-top: 20px;
+  padding: 20px 60px;
+  border-radius: var(--border-radius);
+}
+
+@media (min-width: 1280px) {
   .rect {
-    background-color: var(--dark-bg);
-    min-height: 140px;
     min-width: 250px;
-    margin-top: 20px;
-    padding: 20px 60px;
-    border-radius: var(--border-radius);
   }
 }
 
-@media (max-width: 1579px) {
+@media (max-width: 1280px) {
   .rect {
-    background-color: var(--dark-bg);
-    min-height: 140px;
     min-width: 160px;
-    margin-top: 20px;
-    padding: 20px 60px;
-    border-radius: var(--border-radius);
   }
 }
 
@@ -374,15 +368,18 @@ header + .light-sect img {
 }
 
 div.contact {
-        min-width: 5em;
-        max-width: 10em;
-        height: auto;
+  min-width: 5em;
+  max-width: 10em;
+  height: auto;
 }
 
-@media (min-width: 784px) {
+.credits {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
   .credits {
-    display: flex;
-    justify-content: center;
   }
 
   .credits div {
@@ -390,10 +387,9 @@ div.contact {
   }
 }
 
-@media (max-width: 783) {
+@media (max-width: 768px) {
   .credits {
-    display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
 }
 
@@ -409,7 +405,6 @@ footer {
   font-family: "Ubuntu Condensed";
   font-style: normal;
   text-align: center;
-  padding-top: 10px;
   background-color: var(--darker-bg);
   padding-top: 10px;
   padding-bottom: 5px;
