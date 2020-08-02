@@ -1,0 +1,37 @@
+.credits {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .credits div {
+          margin-right: 0.8em;
+  }
+}
+
+@media (max-width: 768px) {
+  .credits {
+    flex-direction: column;
+  }
+}
+
+.credits a {
+  color: var(--blue-accent);
+}
+
+.credits a:hover {
+  color: var(--blue);
+}
+
+footer {
+  font-family: "Ubuntu Condensed";
+  font-style: normal;
+  text-align: center;
+  background-color: var(--darker-bg);
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+footer * {
+  font-family: "Ubuntu Condensed";
+}

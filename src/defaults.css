@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap");
+
+/*global variables*/
+:root {
+  /*colors*/
+  --white: #f8f8f2;
+  --grey: #b3b4b6;
+  --purple: #bd93f9;
+  --pink: #ff79c6;
+  --light-bg: #383a59;
+  --dark-bg: #282a36;
+  --darker-bg: #171820;
+  --blue: #8be9fd;
+  --blue-accent: #6272a4;
+  --red: #ff5555;
+  --dark-focus: #1e202b;
+  --light-focus: #2d2f4d;
+  /*sizes*/
+  --border-radius: 6px;
+  /*breakpoints*/
+  /*
+   * Small: 768px
+   * Widescreen: 1024px
+   * Medium: 1280px
+   * Large: 1440px;
+   */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu";
+  font-weight: 400;
+}
+
+body {
+  color: var(--white);
+  background-color: var(--dark-bg);
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--blue);
+  transition: all 0.2s ease-in;
+}
+
+a:active {
+  color: var(--blue);
+  transition: none;
+}
+
+::selection {
+  color: var(--darker-bg);
+  background-color: var(--purple);
+}
+
+h4 {
+  color: var(--grey);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.light-title {
+  text-align: center;
+  font-size: 22pt;
+  color: var(--white);
+}
+
+.dark-title {
+  text-align: center;
+  font-size: 22pt;
+  color: var(--purple);
+}
+
+.dark-sect {
+  background-color: var(--dark-bg);
+  padding: 40px;
+  min-height: 300px;
+  transition: background-color 0.2s ease-out;
+}
+
+.light-sect {
+  background-color: var(--light-bg);
+  padding: 40px;
+  min-height: 300px;
+  transition: background-color 0.2s ease-out;
+}

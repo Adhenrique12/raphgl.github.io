@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/raphgl.github.io/static/css/main.3687121e.chunk.css",
+    "main.js": "/raphgl.github.io/static/js/main.a72b12f8.chunk.js",
+    "main.js.map": "/raphgl.github.io/static/js/main.a72b12f8.chunk.js.map",
+    "runtime-main.js": "/raphgl.github.io/static/js/runtime-main.50207e8c.js",
+    "runtime-main.js.map": "/raphgl.github.io/static/js/runtime-main.50207e8c.js.map",
+    "static/js/2.26cdf942.chunk.js": "/raphgl.github.io/static/js/2.26cdf942.chunk.js",
+    "static/js/2.26cdf942.chunk.js.map": "/raphgl.github.io/static/js/2.26cdf942.chunk.js.map",
+    "index.html": "/raphgl.github.io/index.html",
+    "precache-manifest.fb39751cef01db8a314630f70f182d89.js": "/raphgl.github.io/precache-manifest.fb39751cef01db8a314630f70f182d89.js",
+    "service-worker.js": "/raphgl.github.io/service-worker.js",
+    "static/css/main.3687121e.chunk.css.map": "/raphgl.github.io/static/css/main.3687121e.chunk.css.map",
+    "static/js/2.26cdf942.chunk.js.LICENSE.txt": "/raphgl.github.io/static/js/2.26cdf942.chunk.js.LICENSE.txt",
+    "static/media/ProfileSection.css": "/raphgl.github.io/static/media/sect-background.ae14698e.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.50207e8c.js",
+    "static/js/2.26cdf942.chunk.js",
+    "static/css/main.3687121e.chunk.css",
+    "static/js/main.a72b12f8.chunk.js"
+  ]
+}

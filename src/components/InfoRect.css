@@ -1,0 +1,32 @@
+.info-rect {
+  background-color: var(--dark-bg);
+  min-height: 140px;
+  width: 75%;
+  height: 60%;
+  padding: 2.5em;
+  border-radius: var(--border-radius);
+  margin: auto;
+}
+
+@media (min-width: 1279px) {
+  .info-rect {
+    min-width: 250px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .info-rect {
+    min-width: 160px;
+  }
+}
+
+.info-rect h4 {
+  color: var(--purple);
+}
+
+.info-rect li {
+  text-align: center;
+  font-size: 16pt;
+  list-style: none;
+  padding-bottom: 2px;
+}

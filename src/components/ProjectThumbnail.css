@@ -1,0 +1,27 @@
+.project-rect {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+
+.project-rect img {
+  color: var(--light-bg);
+  background-color: var(--grey);
+  height: 70%;
+  min-height: 178px;
+  min-width: 276px;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  text-align: center;
+}
+
+.project-rect h4 {
+  background-color: var(--light-bg);
+  min-width: 276px;
+  height: 2em;
+  padding-top: 2%;
+  text-align: center;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
