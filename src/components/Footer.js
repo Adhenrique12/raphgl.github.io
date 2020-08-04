@@ -2,7 +2,7 @@ import React from "react";
 import "../defaults.css";
 import "./Footer.css";
 
-const Footer = () => {
+export default const Footer = () => {
   return (
     <footer>
       ©2020 · Rafael Lopes
@@ -19,5 +19,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;
