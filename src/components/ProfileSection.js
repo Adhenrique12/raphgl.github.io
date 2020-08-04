@@ -2,7 +2,7 @@ import React from "react";
 import './ProfileSection.css';
 import '../defaults.css';
 
-const ProfileSection = ()=> {
+export default ProfileSection = ()=> {
   return (
     <section class="light-sect">
       <img src="https://avatars2.githubusercontent.com/u/28673457?s=70)](https://github.com/RaphGL" />
@@ -14,5 +14,3 @@ const ProfileSection = ()=> {
     </section>
   );
 }
-
-export default ProfileSection;
