@@ -2,7 +2,7 @@ import React from "react";
 import "../defaults.css";
 import "./Footer.css";
 
-export default const Footer = () => {
+export default Footer = () => {
   return (
     <footer>
       ©2020 · Rafael Lopes
